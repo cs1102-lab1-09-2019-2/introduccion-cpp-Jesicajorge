@@ -1,6 +1,10 @@
 /*
  * Solamente incluir los header files que se requiren para hacer funcionar el programa
  */
+#include<iostream>
+#include<vector>
+#include<iomanip>
+#include <bits/unordered_set.h>
 
 int main()
 {
@@ -9,8 +13,8 @@ int main()
     std::unordered_set<int> s(v.begin(), v.end());
     v.assign(s.begin(), s.end());
 
-    for (auto it = v.cbegin(); it != v.cend(); ++it)
-        std::cout << *it << ' ';
+    for(int it : v)
+        std::cout << it << ' ';
 
     return 0;
 }
